@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+
+    <!-- Підключення стилів basicLightbox -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css"
+    />
+
+    <style>
+      body {
+        background-color: #fafafa;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 24px;
+      }
+
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        list-style: none;
+        justify-content: center;
+        padding: 0;
+      }
+
+      .gallery-item {
+        flex-basis: calc((100% - 64px) / 3);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.2s ease;
+      }
+
+      .gallery-item:hover {
+        transform: scale(1.03);
+      }
+
+      .gallery-link {
+        display: block;
+        text-decoration: none;
+      }
+
+      .gallery-image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="gallery"></ul>
+
+    <!-- Підключення бібліотеки basicLightbox -->
+    <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>
+
+    <!-- Підключення твого JS -->
+    <script type="module" src="./js/gallery.js"></script>
+  </body>
+</html>
